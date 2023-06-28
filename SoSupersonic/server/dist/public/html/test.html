@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SoSupersonic Testing</title>
+
+        <meta charset=utf-8 >
+        <meta name=viewport content="width=device-width,
+              initial-scale=1, shrink-to-fit=no" >
+        
+        <script src=/static/scripts/querySelectorStyle.js ></script>
+        <script src=/static/scripts/testing.js            ></script>
+
+        <script>
+            /* scelta fra callback o lista di lista di parametri                 */
+            /* 1 name ; 2 hash ; 3 values ; 4 short ; 7 iteration ; 8 sleep_time */
+            function testingVerify( listToCall )
+            {
+                var        current =           listToCall[ 0 ]   ;
+                var list_to_verify =              current[ 4 ]   ;
+                var  prove_another = '' + String( current[ 5 ] ) ;
+
+                textarea.setValue( 'temporary' , '' ) ;
+
+                for ( var i = 0 ; i < current[ 6 ] ; i ++ )
+                
+                    testing( current[0] , current[1] , current[2] , current[3] ) ;
+
+                var interval = setInterval( () =>
+                {
+                    var  TMPvalue = textarea.getValue( 'temporary' ) ;
+                    if ( TMPvalue.length > 0 )
+                    {
+                        var boolVerified = true ;
+
+                        for ( var i = 0 ; i < list_to_verify.length ; i ++ )
+                                                
+                            if ( TMPvalue.indexOf( list_to_verify[ i ] ) > -1 ) continue ;
+
+                            else { boolVerified = false ; break ; }
+
+                        TMPvalue += ( boolVerified ?
+                        
+                            '\n....... ok for verify' + ( prove_another.length > 0 ?
+
+                                `\n.......... ok for another : ${prove_another}` :
+                                `\n...... not ok for another : ${prove_another}`
+                            ) :
+                            '\n\n/* ERROR --- SIGNED --- HERE --- ERROR */\n' +
+                                                    '\n... not ok for verify'
+                        ) ;
+
+                        textarea.updateLineValue(    'testarea' , TMPvalue ) ;
+                        textarea.setYscrollTopValue( 'testarea' , textarea.getYscrollTopSize( 'testarea' ) ) ;
+                        textarea.setStyle(           'testarea' , 'color' , ( boolVerified ? 'green' : 'red' ) ) ;
+
+                        clearInterval( interval ) ;
+
+                        if ( ! boolVerified ) return ;
+                        
+                        else if ( listToCall.length > 0 )
+
+                            testingVerify( listToCall.slice( 1 ) ) ;
+
+                } } , current[ 7 ] ) ;
+            }
+
+            function onLoadDocument()
+            {
+                const valid_input_true = 'input inserted is valid ? true.' ;
+
+                const valid_rows_false = 'rows in values is valid ? false.' ;
+                const valid_rows_true  = 'rows in values is valid ? true.'  ;
+
+                const valid_rowsx_false = (x) => { return `rows ${x} in values is not valid.` } ;
+
+                const hash_value_false = 'find hash value ? false.' ;
+                const hash_value_true  = 'find hash value ? true.'  ;
+
+                const one_csv_not_exists = 'File does not exist for _1.csv' ;
+
+                const one_cvs_exists_false = '_1.csv exists ? false.' ;
+                const one_cvs_exists_true  = '_1.csv exists ? true.'  ;
+
+                const csv_short_exists_false = 'csv file exists ? false.' ;
+                const csv_short_exists_true  = 'csv file exists ? true.'  ;
+
+                const default_time = 500       ;
+                const    long_time = 2 * 60000 ;
+
+                const csvx_ifexists = ( x ) => { return `_${x}.csv` ; }
+
+                const append_on_smartphone = 'Append Sync on File done.' ;
+
+                textarea.setValue( 'testarea'  , ''          ) ;
+                textarea.setValue( 'temporary' , ''          ) ;
+                textarea.setStyle( 'testarea'  , 'color'       , 'green'  ) ;
+                textarea.setStyle( 'testarea'  , 'font-size'   , 'large'  ) ;
+                textarea.setStyle( 'testarea'  , 'font-weight' , 'bold'   ) ;
+                textarea.setStyle( 'testarea'  , 'overflow-x'  , 'scroll' ) ;
+                textarea.setStyle( 'testarea'  , 'overflow-y'  , 'scroll' ) ;
+                textarea.setStyle( 'testarea'  , 'white-space' ,    'pre' ) ;
+
+                // ------------------------------------------------------------------------------------------------------------------
+
+                testInit() ; testingVerify (
+                [
+                    [ '' , '' , '' , '' , [ 'init done' ] , 'init done' , 0 , default_time ] ,
+
+                    [ 'nome_file_0' , 'hash_non_valido' , 'values' , ''  , [ one_csv_not_exists ] , 'file does not exist ok for pc' , 1 , default_time ] ,
+
+                    [ 'nome_file_1' , 'hash_non_valido' , 'values' , '1' , [ one_csv_not_exists ] , 'file does not exist ok for smartphone' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'nome_file_0' , '' , 'value1,,,value2,,,value3' ,  '' ,
+                    
+                    [ valid_input_true , valid_rows_true , hash_value_false , one_cvs_exists_false , one_cvs_exists_true ] ,
+
+                    '[ valid_input_true , valid_rows_true ] made good for pc' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+                
+                    [ 'nome_file_0' , '' , 'value1,,,value2,,,value3\n'  +
+                                           'value12,,,value22,,,value32' ,  '' , 
+                
+                    [ valid_input_true , valid_rows_true , hash_value_false , one_cvs_exists_true ] ,
+
+                    '[ valid_input_true , valid_rows_true , not overwrite file ] made good for pc' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                    [ 'nome_file_1' , '' , 'value1,,,value2,,,value3' ,  '1' ,
+                
+                    [ valid_input_true , valid_rows_true , hash_value_false , csv_short_exists_false , csv_short_exists_true ] ,
+
+                    '[ valid_input_true , valid_rows_true ] made good for smartphone' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+                    
+                    [ 'nome_file_1' , '' , 'value1,,,value2,,,value3\n'  +
+                                           'value12,,,value22,,,value32' ,  '1' , 
+                
+                    [ valid_input_true , valid_rows_true , hash_value_false , csv_short_exists_true ] ,
+
+                    '[ valid_input_true , valid_rows_true , not overwrite file ] made good for smartphone' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'nome_file_0_2' , '' , 'value1,,,value2,,,value3\nvalue4' ,  '' ,
+                
+                    [ valid_input_true , valid_rows_true , valid_rowsx_false( 2 ) ] ,
+
+                    '[ not_valid_rows_2_false ] made good for pc' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'nome_file_1_2' , '' , 'value1,,,value2,,,value3\nvalue4' ,  '1' ,
+                
+                    [ valid_input_true , valid_rows_true , valid_rowsx_false( 2 ) ] ,
+
+                    '[ not_valid_rows_2_false ] made good for smartphone' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'nome_file_0' , '457d3bd73bf722bdec9154828017cad9' , 'value4,,,value5,,,value6' ,  '' ,
+                
+                    [ valid_input_true , valid_rows_true , hash_value_true , csvx_ifexists( 1 ) ] ,
+
+                    '[ append on csv ] made good for pc' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'nome_file_1' , '457d3bd73bf722bdec9154828017cad9' , 'value4,,,value5,,,value6' ,  '1' ,
+                
+                    [ valid_input_true , valid_rows_true , hash_value_true , append_on_smartphone ] ,
+
+                    '[ append on csv ] made good for smartphone' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'nome_file_0' , '457d3bd73bf722bdec9154828017cad9' , 'value|a,,,value|b,,,value|c' ,  '' ,
+                
+                    [ valid_input_true , valid_rows_true , hash_value_true , csvx_ifexists( 2 ) ] ,
+
+                    '[ append on csv && new file creation ] made good for pc' , 320 , long_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'nome_file_1' , '457d3bd73bf722bdec9154828017cad9' , 'value|a,,,value|b,,,value|c' ,  '1' ,
+                
+                    [ valid_input_true , valid_rows_true , hash_value_true , append_on_smartphone ] ,
+
+                    '[ append on csv && new file creation ] made good for smartphone' , 320 , long_time ] ,
+            
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+                
+                    [ 'nome_file_0' , '457d3bd73bf722bdec9154828017cad9' , 'value|a,,,value|b\n' +
+                                                                           'value|a,,,value|b', '' ,
+                    
+                    [ valid_input_true , valid_rows_true , hash_value_true , valid_rowsx_false( 1 ) ] ,
+
+                    '[ not_valid_rows_1_ for append on csv ] made good for pc' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'nome_file_1' , '457d3bd73bf722bdec9154828017cad9' , 'value|a,,,value|b\n' +
+                                                                           'value|a,,,value|b', '1' ,
+                    
+                    [ valid_input_true , valid_rows_true , hash_value_true , valid_rowsx_false( 1 ) ] ,
+
+                    '[ not_valid_rows_1_ for append on csv ] made good for smartphone' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'nome_file_0' , '457d3bd73bf722bdec9154828017cad9' , multiplyLine( 'value|d,,,value|e,,,value|f' , 280 ) ,  '' ,
+
+                    [ valid_input_true , valid_rows_true , hash_value_true , csvx_ifexists( 3 ) ] ,
+
+                    '[ append on csv && new file 2e3 selected && multiplyLine is very speedly ] made good for pc' , 2 , default_time * 2 ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'nome_file_1' , '457d3bd73bf722bdec9154828017cad9' , multiplyLine( 'value|d,,,value|e,,,value|f' , 280 ) , '1' ,
+
+                    [ valid_input_true , valid_rows_true , hash_value_true , append_on_smartphone ] ,
+
+                    '[ append on csv && new file 2e3 selected && multiplyLine is very speedly ] made good for smartphone' , 2 , default_time * 2 ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'testmakecode1' , '' , 'titolo\n\nrowa\n\nrowb,,\nrowc' , '' ,
+
+                    [ valid_input_true , valid_rows_true , hash_value_false , one_cvs_exists_false , one_cvs_exists_true ] ,
+
+                    '[ make code text ] made good for pc' , 1 , default_time ] ,
+
+                    // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    [ 'testmakecode2' , '' , 'titolo\n\nrowa\n\nrowb,,\nrowc' , '1' ,
+
+                    [ valid_input_true , valid_rows_true , hash_value_false , csv_short_exists_false , csv_short_exists_true ] ,
+
+                    '[ make code text ] made good for smartphone' , 1 , default_time ]
+                ] ) ;
+            }
+        </script>
+    </head>
+    
+    <body onload=onLoadDocument() style="padding:10px; background-color:darkblue;" >
+        <textarea id="temporary"  style="display:none" ></textarea>
+        <textarea id="testarea"   style="width:calc( 100% - 20px );height:830px;resize:none;padding:10px;" readonly >
+        </textarea>
+    </body>
+</html>

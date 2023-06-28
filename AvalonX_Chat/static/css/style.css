@@ -1,0 +1,25 @@
+
+body
+{
+    background-image: url('/static/Images/chat.jpg');
+    padding: 40px;
+}
+
+.space { height: 20px; }
+
+select, button, input, textarea { width: 100%; opacity: 0.9; background-color: lightgray; }
+select, button, input, textarea { background-color: whitesmoke; border: solid 3px black; border-radius: 15px; }
+select, button, input, textarea, #number, #myid, #users { font-weight: bold; }
+
+textarea { height: 200px; resize: none; overflow: auto; padding: 20px; }
+button { height: 50px; }
+
+#texa1 { color:  blue; height: 100px; }
+#texa2 { color: green; height: 400px; }
+input  { color:  blue; }
+
+#number, #myid, #users { color: lightblue; }
+
+#row1 { border: solid 1px blue; background-color: black; opacity: 0.7; padding: 10px; border-radius: 15px; }
+
+input, select { padding: 5px; }

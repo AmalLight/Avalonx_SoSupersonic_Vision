@@ -1,0 +1,13 @@
+[Unit]
+Description=AVALON for WEB
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+User=kaumi
+ExecStart=avalon
+ExecStop=pkill avalon
+
+[Install]
+WantedBy=multi-user.target

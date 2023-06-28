@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SoSupersonic</title>
+
+        <meta charset=utf-8 >
+        <meta name=viewport content="width=device-width,
+              initial-scale=1, shrink-to-fit=no" >
+
+        <link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css />
+
+        <script src=https://code.jquery.com/jquery-3.2.1.min.js ></script>
+        <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js        ></script>
+        <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js ></script>
+
+        <script src=/static/scripts/onLoad.js  ></script>
+        <script src=/static/scripts/action.js  ></script>
+        <script src=/static/scripts/monitor.js ></script>
+
+        <script src=/static/scripts/querySelectorStyle.js ></script>
+
+        <link rel=icon       href=/static/ico/code.ico    />
+        <link rel=stylesheet href=/static/style/style.css />
+
+        <script>
+            var monitor ;
+
+            var ip = '192.168.43.42' ;
+
+            function onLoadDocument()
+            {
+                monitor = new Monitor() ;
+                onLoad(   1,  monitor ) ;
+            }
+        </script>
+    </head>
+    
+    <body onload="onLoadDocument()" onresize="onLoad(2,monitor)" >
+
+        <div id="top1" class="row text-center" >
+            <input class="col-5" id="name1" placeholder="name" >
+            <input class="col-6" id="hash1" placeholder="hash" >
+        </div>
+
+        <div id="top2" class="row" >
+            <input class="col-12" id="name2" placeholder="name" >
+            <input class="col-12" id="hash2" placeholder="hash" >
+        </div>
+
+        <div class="space" ></div>
+
+        <div id="table1" >
+            
+            <div class="row" >
+                <label class="col-7 text-center" >
+                    Values
+                </label>
+
+                <div class="col-1" ></div>
+
+                <label class="col-4 text-center" >
+                    Infos
+                </label>
+            </div>
+
+            <div class="row" >
+                <textarea class="col-7" id="values1" ></textarea>
+
+                <div class="col-1" ></div>
+
+                <textarea class="col-4" id="infos1" readonly >
+                </textarea>
+            </div>
+        </div>
+
+        <div id="table2" >
+            
+            <div class="row" >
+                <label class="col-12 text-center" >
+                    Values
+                </label>
+            </div>
+
+            <div class="row">
+                <textarea class="col-12" id="values2" >
+                </textarea>
+            </div>
+        </div>
+
+        <div class="space" ></div>
+
+        <div id="down1" class="row text-center" >
+
+            <button class="col-5" onclick="Alist( monitor , ip )" >
+                LIST
+            </button>
+            
+            <button class="col-5" onclick="Aread()" >
+                READ
+            </button>
+
+            <div class="space" ></div>
+
+            <button class="col-12" onclick="Ainsert( monitor )" >
+                INSERT
+            </button>
+        </div>
+
+        <div id="down2" class="row" >
+
+            <button class="col-12" onclick="Alist( monitor , ip )" >
+                LIST
+            </button>
+
+            <button class="col-12" onclick="Ainsert( monitor )" >
+                INSERT
+            </button>
+
+            <div class="space" ></div>
+            
+            <label class="col-12" id="infos2" ></label>
+        </div>
+
+    </body>
+</html>

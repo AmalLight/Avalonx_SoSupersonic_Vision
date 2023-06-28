@@ -1,0 +1,51 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-clip: border-box;
+  padding: 40px; }
+
+.space {
+  height: 20px; }
+
+button, input, #table1, #table2, #values1a, #values1b, #infos1, label {
+  border: 2px solid darkgreen;
+  border-radius: 20px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: large;
+  font-weight: bold;
+  color: black; }
+  button:hover, input:hover, #table1:hover, #table2:hover, #values1a:hover, #values1b:hover, #infos1:hover, label:hover {
+    background-color: rgba(255, 255, 255, 0.7); }
+  button:active, input:active, #table1:active, #table2:active, #values1a:active, #values1b:active, #infos1:active, label:active {
+    background-color: rgba(240, 255, 255, 0.8); }
+
+#table1, #table2 {
+  padding: 30px;
+  height: auto; }
+
+#values1a, #values1b, #values2, #infos1, #infos2, #description {
+  overflow-y: scroll;
+  border-radius: 0px;
+  scrollbar-width: thin;
+  scrollbar-color: gray white;
+  word-wrap: normal; }
+
+#description {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: pre; }
+
+label {
+  padding: 5px; }
+
+#values1a, #values1b, #values2, #infos1 {
+  white-space: pre;
+  overflow-x: scroll;
+  color: black;
+  padding: 10px;
+  font-family: 'Courier New'; }
+  #values1a:focus, #values1b:focus, #values2:focus, #infos1:focus {
+    outline: none; }

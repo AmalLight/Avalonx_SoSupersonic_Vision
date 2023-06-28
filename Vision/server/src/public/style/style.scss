@@ -1,0 +1,59 @@
+body
+{
+    background-repeat     :  no-repeat ;
+    background-size       :      cover ;
+    background-position   :     center ;
+    background-attachment :      fixed ;
+    background-clip       : border-box ;
+
+    padding : 40px ;
+}
+
+.space { height : 20px ; }
+
+button , input , #table1 , #table2 , #values1a , #values1b , #infos1 , label
+{
+    border : 2px solid darkgreen ;
+    border-radius : 20px ;
+
+    height : 50px ;
+    background-color : rgba( white , 0.6 ) ;
+
+    font-size : large ;
+    font-weight : bold ;
+    color : black ;
+
+    &:hover  { background-color: rgba( white , 0.7 ); }
+    &:active { background-color: rgba( azure , 0.8 ); }
+}
+
+#table1 , #table2 { padding : 30px ; height : auto ; }
+
+#values1a , #values1b , #values2 , #infos1 , #infos2 , #description
+{
+    overflow-y : scroll ;
+    border-radius : 0px ;
+
+    scrollbar-width : thin ;
+    scrollbar-color : gray white ;
+
+    // apple fix
+    word-wrap  : normal ;
+}
+
+#description { overflow-x : scroll ; overflow-y : hidden ; white-space : pre ; }
+
+label { padding : 5px ; }
+
+#values1a , #values1b , #values2 , #infos1
+{
+    white-space : pre ;
+    overflow-x : scroll ;
+    
+    color : black ;    
+    padding : 10px ;
+
+    font-family : 'Courier New' ;
+
+    &:focus { outline : none ; }
+}

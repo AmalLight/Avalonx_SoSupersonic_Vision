@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vision</title>
+
+        <meta charset=utf-8 >
+        <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+
+        <link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css />
+
+        <script src=https://code.jquery.com/jquery-3.2.1.min.js ></script>
+        <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js        ></script>
+        <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js ></script>
+
+        <script src=/static/scripts/onLoad.js  ></script>
+        <script src=/static/scripts/action.js  ></script>
+        <script src=/static/scripts/monitor.js ></script>
+        
+        <script src=/static/scripts/querySelectorStyle.js ></script>
+
+        <script src=/static/scripts/defaultColors.js ></script>
+        <script src=/static/scripts/defaultClasse.js ></script>
+        <script src=/static/scripts/textToHtml.js    ></script>
+
+        <script src=/static/scripts/textwrite.js ></script>
+        <script src=/static/scripts/modelText.js ></script>
+
+        <script src=/static/scripts/saveFile.js ></script>
+        <script src=/static/scripts/historZY.js ></script>
+        <script src=/static/scripts/histor.js   ></script>
+
+        <link rel=icon       href=/static/ico/code.ico    />
+        <link rel=stylesheet href=/static/style/style.css />
+        
+        <script>
+
+            var hist    ;
+            var monitor ;
+            var colors  ;
+            var classe  ;
+            
+            var saveFile ;
+            
+            function onLoadDocument()
+            {
+                   hist  = new Histor( 30 ) ;
+                monitor  = new Monitor( 0 ) ;
+                saveFile = new Save()       ;
+                
+                setInterval( () => 
+                {
+                    if ( hist.add( 'values1b' ) )
+
+                        saveFile.saveTheFile() ;
+
+                } , 2000 ) ;
+
+                classe = {} ;
+                colors = default_colors() ;
+
+                onLoad( 1 , monitor ) ;
+
+                default_classe( colors , classe ) ;
+
+                textarea.focusOn( 'values1b' ) ;
+            }
+
+        </script>
+    </head>
+    
+    <body onload=onLoadDocument() onresize="onLoad( 2 , monitor )" >
+
+        <div class="space" ></div>
+
+        <label id="description" class="col-12" >Description</label>
+
+        <div class="space" ></div>
+
+        <div id="table1" >
+            
+            <div class="row" >
+                <label class="col-9 text-center" >
+                    Values
+                </label>
+
+                <label class="col-3 text-center" >
+                    Infos
+                </label>
+            </div>
+
+            <div class="space" ></div>
+
+            <div class="row" >
+                <div class="col-1" id="values1a" 
+                     onclick="onclicktable(   'values1a' , colors )"
+                     onscroll="onscrolltable( 'values1a' )" >
+                </div>
+
+                <textarea class="col-9" id="values1b"
+                          onkeydown="historZY( event , hist , saveFile )"
+                          onkeyup="modelText(  event , classe , colors )"
+                          onclick="onclicktable(   'values1b' , colors )"
+                          onscroll="onscrolltable( 'values1b' )" >
+                </textarea>
+                
+                <div class="col-2 text-center" id="infos1" ></div>
+            </div>
+
+        </div>
+
+        <div id="table2" >
+            
+            <div class="row" >
+                <label class="col-12 text-center" >Values</label>
+            </div>
+
+            <div class="space" ></div>
+
+            <div class=row>
+                <textarea class="col-12" id="values2" >
+                </textarea>
+            </div>
+
+        </div>
+
+        <div class=space ></div>
+
+        <input id="getcsv" class="col-12" placeholder="COMMANDS"
+               onkeyup="onkeyupcsv( event , colors , classe , monitor , saveFile )" >
+        </input>
+
+    </body>
+</html>

@@ -1,0 +1,492 @@
+kaumi@debian:~/Git/Avalonx_SoSupersonic_Vision/AvalonX_Chat$ py app.py
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+min: 0
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8899
+ * Running on http://192.168.1.50:8899
+Press CTRL+C to quit
+take received for: Intruder
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:12:23] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:23] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:24] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+wait received for: Guest as thread: True
+wait done for: Guest as thread: True
+take done for: Guest
+close received for: Guest as thread: True
+close done for: Guest as thread: True
+127.0.0.1 - - [03/May/2023 18:12:24] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:12:25] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:25] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+wait received for: Admin as thread: True
+wait done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:26] "POST /p HTTP/1.1" 200 -
+take done for: Admin
+close received for: Admin as thread: True
+close done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:26] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+127.0.0.1 - - [03/May/2023 18:12:26] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:26] "POST /p HTTP/1.1" 200 -
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+127.0.0.1 - - [03/May/2023 18:12:27] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:27] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:12:27] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:28] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+wait received for: Admin as thread: True
+wait done for: Admin as thread: True
+take done for: Admin
+close received for: Admin as thread: True
+close done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:28] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:28] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+wait received for: Guest as thread: True
+wait done for: Guest as thread: True
+take done for: Guest
+close received for: Guest as thread: True
+close done for: Guest as thread: True
+127.0.0.1 - - [03/May/2023 18:12:28] "POST /p HTTP/1.1" 200 -
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+127.0.0.1 - - [03/May/2023 18:12:28] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:12:29] "POST /p HTTP/1.1" 200 -
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:12:29] "POST /p HTTP/1.1" 200 -
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+127.0.0.1 - - [03/May/2023 18:12:30] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+wait received for: Admin as thread: True
+wait done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:30] "POST /p HTTP/1.1" 200 -
+take done for: Admin
+close received for: Admin as thread: True
+close done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:30] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:30] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+wait received for: Guest as thread: True
+wait done for: Guest as thread: True
+take done for: Guest
+close received for: Guest as thread: True
+close done for: Guest as thread: True
+127.0.0.1 - - [03/May/2023 18:12:30] "POST /p HTTP/1.1" 200 -
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+127.0.0.1 - - [03/May/2023 18:12:31] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:12:31] "POST /p HTTP/1.1" 200 -
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:12:31] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:32] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+wait received for: Admin as thread: True
+wait done for: Admin as thread: True
+take done for: Admin
+close received for: Admin as thread: True
+close done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:32] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:32] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+wait received for: Guest as thread: True
+wait done for: Guest as thread: True
+take done for: Guest
+close received for: Guest as thread: True
+close done for: Guest as thread: True
+127.0.0.1 - - [03/May/2023 18:12:32] "POST /p HTTP/1.1" 200 -
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+127.0.0.1 - - [03/May/2023 18:12:33] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+wait received for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:12:33] "POST /p HTTP/1.1" 200 -
+wait done for: Intruder as thread: True
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:12:33] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+wait received for: Admin as thread: True
+wait done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:34] "POST /p HTTP/1.1" 200 -
+take done for: Admin
+close received for: Admin as thread: True
+close done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:34] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:34] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+wait received for: Guest as thread: True
+wait done for: Guest as thread: True
+take done for: Guest
+close received for: Guest as thread: True
+close done for: Guest as thread: True
+127.0.0.1 - - [03/May/2023 18:12:34] "POST /p HTTP/1.1" 200 -
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+127.0.0.1 - - [03/May/2023 18:12:34] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:35] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:12:35] "POST /p HTTP/1.1" 200 -
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+127.0.0.1 - - [03/May/2023 18:12:35] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:36] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+wait received for: Admin as thread: True
+wait done for: Admin as thread: True
+take done for: Admin
+close received for: Admin as thread: True
+close done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:36] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+127.0.0.1 - - [03/May/2023 18:12:36] "POST /p HTTP/1.1" 200 -
+wait received for: Guest as thread: True
+wait done for: Guest as thread: True
+take done for: Guest
+close received for: Guest as thread: True
+close done for: Guest as thread: True
+127.0.0.1 - - [03/May/2023 18:12:36] "POST /p HTTP/1.1" 200 -
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+127.0.0.1 - - [03/May/2023 18:12:36] "POST /p HTTP/1.1" 200 -
+send received for: Admin
+wait received for: Admin as thread: False
+wait done for: Admin as thread: False
+send done for: Admin
+close received for: Admin as thread: False
+close done for: Admin as thread: False
+127.0.0.1 - - [03/May/2023 18:12:37] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:12:37] "POST /p HTTP/1.1" 200 -
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:12:37] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+wait received for: Admin as thread: True
+wait done for: Admin as thread: True
+take done for: Admin
+close received for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:38] "POST /p HTTP/1.1" 200 -
+close done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:12:38] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:38] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+wait received for: Guest as thread: True
+wait done for: Guest as thread: True
+take done for: Guest
+close received for: Guest as thread: True
+close done for: Guest as thread: True
+127.0.0.1 - - [03/May/2023 18:12:38] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:12:39] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:39] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:40] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+127.0.0.1 - - [03/May/2023 18:12:40] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:12:41] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:12:41] "POST /p HTTP/1.1" 200 -
+min: 13
+del: 1
+del: 2
+del: 3
+del: 4
+del: 5
+del: 6
+del: 7
+del: 8
+del: 9
+del: 10
+del: 11
+del: 12
+127.0.0.1 - - [03/May/2023 18:13:33] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:13:33] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:13:35] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:13:35] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:13:37] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:13:37] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:13:39] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:13:39] "POST /p HTTP/1.1" 200 -
+send received for: Intruder
+wait received for: Intruder as thread: False
+wait done for: Intruder as thread: False
+send done for: Intruder
+close received for: Intruder as thread: False
+close done for: Intruder as thread: False
+127.0.0.1 - - [03/May/2023 18:13:40] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:13:41] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:13:41] "POST /p HTTP/1.1" 200 -
+send received for: Intruder
+wait received for: Intruder as thread: False
+wait done for: Intruder as thread: False
+send done for: Intruder
+close received for: Intruder as thread: False
+close done for: Intruder as thread: False
+127.0.0.1 - - [03/May/2023 18:13:41] "POST /p HTTP/1.1" 200 -
+send received for: Intruder
+wait received for: Intruder as thread: False
+wait done for: Intruder as thread: False
+send done for: Intruder
+close received for: Intruder as thread: False
+close done for: Intruder as thread: False
+127.0.0.1 - - [03/May/2023 18:13:42] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:13:43] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:13:43] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:13:45] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:13:45] "POST /p HTTP/1.1" 200 -
+send received for: Intruder
+wait received for: Intruder as thread: False
+wait done for: Intruder as thread: False
+send done for: Intruder
+close received for: Intruder as thread: False
+close done for: Intruder as thread: False
+127.0.0.1 - - [03/May/2023 18:13:47] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:13:47] "POST /p HTTP/1.1" 200 -
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:13:47] "POST /p HTTP/1.1" 200 -
+send received for: Intruder
+wait received for: Intruder as thread: False
+wait done for: Intruder as thread: False
+send done for: Intruder
+close received for: Intruder as thread: False
+close done for: Intruder as thread: False
+127.0.0.1 - - [03/May/2023 18:13:48] "POST /p HTTP/1.1" 200 -
+send received for: Intruder
+wait received for: Intruder as thread: False
+wait done for: Intruder as thread: False
+send done for: Intruder
+close received for: Intruder as thread: False
+close done for: Intruder as thread: False
+127.0.0.1 - - [03/May/2023 18:13:48] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:13:49] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:13:49] "POST /p HTTP/1.1" 200 -
+send received for: Intruder
+wait received for: Intruder as thread: False
+wait done for: Intruder as thread: False
+send done for: Intruder
+close received for: Intruder as thread: False
+close done for: Intruder as thread: False
+127.0.0.1 - - [03/May/2023 18:13:49] "POST /p HTTP/1.1" 200 -
+send received for: Intruder
+wait received for: Intruder as thread: False
+wait done for: Intruder as thread: False
+send done for: Intruder
+close received for: Intruder as thread: False
+close done for: Intruder as thread: False
+127.0.0.1 - - [03/May/2023 18:13:51] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:13:51] "POST /p HTTP/1.1" 200 -
+wait received for: Intruder as thread: True
+wait done for: Intruder as thread: True
+take done for: Intruder
+close received for: Intruder as thread: True
+close done for: Intruder as thread: True
+127.0.0.1 - - [03/May/2023 18:13:51] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:13:53] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:13:53] "POST /p HTTP/1.1" 200 -
+min: 13
+127.0.0.1 - - [03/May/2023 18:14:25] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+wait received for: Guest as thread: True
+wait done for: Guest as thread: True
+take done for: Guest
+close received for: Guest as thread: True
+close done for: Guest as thread: True
+127.0.0.1 - - [03/May/2023 18:14:25] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:14:28] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:14:28] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:14:30] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:14:30] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:14:32] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:14:32] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:14:34] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:14:34] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:14:36] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:14:36] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:14:38] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:14:38] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:01] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+127.0.0.1 - - [03/May/2023 18:15:01] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+127.0.0.1 - - [03/May/2023 18:15:03] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:03] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+127.0.0.1 - - [03/May/2023 18:15:06] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:06] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+wait received for: Admin as thread: True
+wait done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:15:06] "POST /p HTTP/1.1" 200 -
+take done for: Admin
+close received for: Admin as thread: True
+close done for: Admin as thread: True
+127.0.0.1 - - [03/May/2023 18:15:06] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:08] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+127.0.0.1 - - [03/May/2023 18:15:08] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:15:09] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:09] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+127.0.0.1 - - [03/May/2023 18:15:09] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:09] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+127.0.0.1 - - [03/May/2023 18:15:10] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:10] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:15:11] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:11] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:11] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+127.0.0.1 - - [03/May/2023 18:15:11] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:12] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+127.0.0.1 - - [03/May/2023 18:15:12] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:15:13] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:13] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+127.0.0.1 - - [03/May/2023 18:15:13] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:13] "POST /p HTTP/1.1" 200 -
+take received for: Guest
+127.0.0.1 - - [03/May/2023 18:15:14] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:14] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+127.0.0.1 - - [03/May/2023 18:15:15] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:15] "POST /p HTTP/1.1" 200 -
+take received for: Intruder
+127.0.0.1 - - [03/May/2023 18:15:15] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:15] "POST /p HTTP/1.1" 200 -
+take received for: Admin
+127.0.0.1 - - [03/May/2023 18:15:17] "POST /p HTTP/1.1" 200 -
+127.0.0.1 - - [03/May/2023 18:15:17] "POST /p HTTP/1.1" 200 -
+min: 21
+del: 13
+del: 14
+del: 15
+del: 16
+del: 17
+del: 18
+del: 19
+del: 20

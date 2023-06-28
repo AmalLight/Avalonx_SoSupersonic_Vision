@@ -1,0 +1,13 @@
+[Unit]
+Description=Vision nodemon
+After=network.target
+
+[Service]
+Type=simple
+User=kaumi
+WorkingDirectory=/home/kaumi/Empire/Vision/server
+ExecStart=nodemon dist/private/scripts/index.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

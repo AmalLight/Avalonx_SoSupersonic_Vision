@@ -1,0 +1,34 @@
+{
+    "compilerOptions":
+    {
+        "target" : "ES2020",
+        "module" : "CommonJS",
+
+        "lib":
+        [
+            "DOM",
+            "ES2020",
+            "ESNext",
+            "ScriptHost",
+        ],
+
+        "outDir"         : "/home/kaumi/Git/Avalonx_SoSupersonic_Vision/Vision/server/dist/",
+        "rootDir"        : "/home/kaumi/Git/Avalonx_SoSupersonic_Vision/Vision/server/src/",
+        "removeComments" : true,
+    
+        "strict": true,
+
+        "noUnusedLocals"     : false,
+        "noUnusedParameters" : false,
+
+        "noImplicitAny"     : true,
+        "noImplicitReturns" : true,
+        "noImplicitThis"    : true,
+
+        "noEmitOnError"   : true,        
+        "esModuleInterop" : true,
+
+        "experimentalDecorators" : true ,
+        "allowSyntheticDefaultImports" : true ,
+    }
+}

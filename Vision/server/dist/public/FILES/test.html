@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vision Stressing</title>
+
+        <meta charset=utf-8 >
+        <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+
+        <link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css />
+
+        <script src=https://code.jquery.com/jquery-3.2.1.min.js ></script>
+        <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js        ></script>
+        <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js ></script>
+
+        <script src=/static/scripts/onLoad.js  ></script>
+        <script src=/static/scripts/action.js  ></script>
+        <script src=/static/scripts/monitor.js ></script>
+        
+        <script src=/static/scripts/querySelectorStyle.js ></script>
+
+        <script src=/static/scripts/defaultColors.js ></script>
+        <script src=/static/scripts/defaultClasse.js ></script>
+        <script src=/static/scripts/textToHtml.js    ></script>
+
+        <script src=/static/scripts/textwrite.js ></script>
+        <script src=/static/scripts/modelText.js ></script>
+
+        <script src=/static/scripts/saveFile.js ></script>
+        <script src=/static/scripts/historZY.js ></script>
+        <script src=/static/scripts/histor.js   ></script>
+
+        <link rel=stylesheet href=/static/style/style.css />
+        
+        <script>
+            var monitor  ;
+            var colors   ;
+            var classe   ;            
+            var saveFile ;
+            
+            function testingVerify( toCall , start )
+            {
+                if ( toCall.length > 0 )
+
+                    if ( start == 0 )
+                    {
+                        toCall[ 0 ]() ;
+
+                        testingVerify( toCall.slice( 1 ) , 1 ) ;
+                    }
+
+                    else setTimeout( () =>
+                    {
+                        toCall[ 0 ]() ;
+
+                        testingVerify( toCall.slice( 1 ) , start + 1 ) ;
+
+                    } , 4000 ) ;
+            }
+
+            function onLoadDocument()
+            {
+                querya = 'values1a' ;
+                queryb = 'values1b' ;
+                queryi =   'infos1' ;
+                queryg =   'getcsv' ;
+
+                monitor  = new Monitor( 0 ) ;
+                saveFile = new Save()       ;
+
+                classe = {} ; colors = {} ;
+                onLoad(   1 , monitor   ) ;
+
+                const classes =
+
+                'test,,,ok,,,ok,,,good work,,,white,,,green,,,' + '\n' +
+                'test,,,no,,,no,,,bad  work,,,white,,,red,,,'   + '\n' +
+
+                'test,,,one,,,print°n newline one here,,,newline palette,,,white,,,blue,,,' + '\n' +
+                'test,,,two,,,print°t tab     two here,,,tab     palette,,,blue,,,white,,,' + '\n' +
+
+                'test,,,tre,,,print°t tab     tre here' +
+                                  '°n newline tre here,,,newltab palette,,,black,,,green,,,1' ;
+                testingVerify
+                ( [
+                    function()
+                    {
+                        textarea.setValue( queryb , classes ) ;
+
+                        saveFile.setOn( 'iAmAperfectROBOT.csv' ) ;
+                        saveFile.saveTheFile() ;
+                    } ,
+
+                    function()
+                    {
+                        textarea.setValue( queryb , '' ) ;
+                           input.setValue( queryg , `read iAmAperfectROBOT` ) ;
+                        
+                        onkeyupcsv( { keyCode : 13 } , colors , classe , monitor , saveFile ) ;
+                    } ,
+
+                    function()
+                    {
+                        textarea.setValue( queryb , '.' ) ;
+                        textarea.focusOn(  queryb       ) ;
+                        textarea.setCaret( queryb ,  1  ) ;
+                        
+                        modelText( { keyCode : 0 } , classe , colors ) ;
+                    } ,
+
+                    function()
+                    {
+                        click_textwrite( 'test', '' , true , 1 ) ;
+
+                        textarea.updateFinalRowValue( queryb , '.' ) ;
+
+                        historZY(  { keyCode : 0 } , new Histor( 0 ) ) ;
+                        modelText( { keyCode : 0 } , classe , colors ) ;
+                    } ,
+
+                    function()
+                    {
+                        historZY( { keyCode : 0 } , new Histor( 0 ) ) ;
+
+                        textarea.delPosCurrentRow( queryb , 5 ) ;
+
+                        click_textwrite( 'test', 'one' , false , 0 ) ;
+
+                        textarea.updateFinalLineValue( queryb , '\n' ) ;
+
+                        click_textwrite( 'test', 'two' , false , 0 ) ;
+
+                        textarea.updateFinalLineValue( queryb , '\n' ) ;
+
+                        click_textwrite( 'test', 'tre' , false , 0 ) ;
+                    } ,
+
+                    function() { onclicktable( querya , colors ) ; } ,
+                    function()
+                    {
+                        const div_hash = '<text style="color:darkred;">1</text>&nbsp;' +
+                        '&nbsp;&nbsp;<text>print</text><br><text style="color:darkred' +
+                        ';">2</text>&nbsp;&nbsp;&nbsp;&nbsp;<text>newline</text>&nbsp' +
+                        ';<text style="background-color:white;color:blue;">one</text>' +
+                        '&nbsp;<text>here</text><br><text style="color:darkred;">3</t' +
+                        'ext>&nbsp;&nbsp;&nbsp;<br><text style="color:darkred;">4</te' +
+                        'xt>&nbsp;&nbsp;&nbsp;<text>print</text>&nbsp;&nbsp;&nbsp;&nb' +
+                        'sp;<text>tab</text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text style' +
+                        '="background-color:blue;color:white;">two</text>&nbsp;<text>' +
+                        'here</text><br><text style="color:darkred;">5</text>&nbsp;&n' +
+                        'bsp;&nbsp;<br><text style="color:darkred;">6</text>&nbsp;&nb' +
+                        'sp;&nbsp;<text>print</text>&nbsp;&nbsp;&nbsp;&nbsp;<text>tab' +
+                        '</text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text style="background' +
+                        '-color:black;color:green;"><ins>tre</ins></text>&nbsp;<text>' +
+                        'here</text><br><text style="color:darkred;">7</text>&nbsp;&n' +
+                        'bsp;&nbsp;&nbsp;<text>newline</text>&nbsp;<text style="backg' +
+                        'round-color:black;color:green;"><ins>tre</ins></text>&nbsp;<' +
+                        'text>here</text>' ;
+
+                        if             ( div.getValue( querya ) == div_hash )
+                             div.updateFinalLineValue( queryi , HTMLfromTEXT( 'ok div' , colors ) ) ;
+                        else div.updateFinalLineValue( queryi , HTMLfromTEXT( 'no div' , colors ) ) ;
+
+                        input.setValue( queryg , `get iAmAperfectROBOT.csv` ) ;
+
+                        onkeyupcsv( { keyCode : 13 } , colors , classe , monitor , saveFile ) ;
+                    } ,
+
+                    function()
+                    {
+                        onclicktable( queryb , colors ) ;
+
+                        if        ( textarea.getValue( queryb ) == classes )
+                             div.updateFinalLineValue( queryi , HTMLfromTEXT( 'ok text' , colors ) ) ;
+                        else div.updateFinalLineValue( queryi , HTMLfromTEXT( 'no text' , colors ) ) ;
+                    } ,
+
+                    function() { alert( 'test done.' ) ; }
+                
+                ] , 0 ) ;
+            }
+        </script>
+    </head>
+    
+    <body onload=onLoadDocument() onresize="onLoad( 2 , monitor )" >
+
+        <div class="space" ></div>
+
+        <label id="description" class="col-12" >in Stressing</label>
+
+        <div class="space" ></div>
+
+        <div id="table1" >
+            
+            <div class="row" >
+                <label class="col-9 text-center" >Values</label>
+
+                <label class="col-3 text-center" >Infos</label>
+            </div>
+
+            <div class="space" ></div>
+
+            <div class="row" >
+                <div class="col-1" id="values1a" ></div>
+
+                <textarea class="col-9" id="values1b" ></textarea>
+                
+                <div class="col-2 text-center" id="infos1" ></div>
+            </div>
+
+        </div>
+
+        <div id="table2" >
+            
+            <div class="row" >
+                <label class="col-12 text-center" >Values</label>
+            </div>
+
+            <div class="space" ></div>
+
+            <div class=row>
+                <textarea class="col-12" id="values2" ></textarea>
+            </div>
+
+        </div>
+
+        <div class=space ></div>
+
+        <input id="getcsv" class="col-12" placeholder="COMMANDS" ></input>
+    </body>
+</html>

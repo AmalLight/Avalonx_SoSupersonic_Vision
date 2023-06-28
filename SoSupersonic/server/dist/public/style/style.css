@@ -1,0 +1,62 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-clip: border-box;
+  padding: 40px; }
+
+.space {
+  height: 20px; }
+
+button, input, textarea, #table1, #table2, label {
+  border: 4px solid black;
+  border-radius: 20px;
+  color: white;
+  font-size: large;
+  font-weight: bold; }
+
+button, input, label {
+  height: 50px; }
+
+button, input, #table1, #table2, textarea, label {
+  background-color: rgba(0, 0, 0, 0.5); }
+  button:hover, input:hover, #table1:hover, #table2:hover, textarea:hover, label:hover {
+    background-color: rgba(0, 0, 0, 0.6); }
+  button:active, input:active, #table1:active, #table2:active, textarea:active, label:active {
+    background-color: rgba(0, 0, 0, 0.7); }
+
+#table1, #table2 {
+  padding: 30px;
+  height: auto; }
+
+#infos2, textarea {
+  overflow-y: scroll;
+  border-radius: 0px;
+  scrollbar-width: thin;
+  scrollbar-color: Navy Black;
+  word-wrap: normal; }
+
+label {
+  padding: 5px; }
+
+::-webkit-scrollbar {
+  background-color: black; }
+
+::-webkit-scrollbar-corner {
+  background-color: black; }
+
+::-webkit-scrollbar-track {
+  background-color: black; }
+
+::-webkit-scrollbar-thumb {
+  background-color: navy; }
+
+textarea {
+  overflow-x: scroll;
+  resize: none;
+  padding: 20px;
+  white-space: pre;
+  font-family: 'Courier New'; }
+  textarea:focus {
+    outline: none; }

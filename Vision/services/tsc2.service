@@ -1,0 +1,13 @@
+[Unit]
+Description=Vision tsc
+After=network.target
+
+[Service]
+Type=simple
+User=kaumi
+WorkingDirectory=/home/kaumi/Empire/Vision/server
+ExecStart=tsc -w --allowSyntheticDefaultImports
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
